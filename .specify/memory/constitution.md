@@ -1,55 +1,69 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: None → 1.0.0
+List of modified principles:
+- [PRINCIPLE_1_NAME] → Simplicity
+- [PRINCIPLE_2_NAME] → Accuracy
+- [PRINCIPLE_3_NAME] → Minimalism
+- [PRINCIPLE_4_NAME] → Fast Builds
+- [PRINCIPLE_5_NAME] → Free-tier Architecture
+- [PRINCIPLE_6_NAME] → RAG Answers ONLY from Book Text
+Added sections: Scope and Constraints, Success Criteria
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md: ⚠ pending
+- .specify/templates/spec-template.md: ⚠ pending
+- .specify/templates/tasks-template.md: ⚠ pending
+- .specify/templates/commands/*.md: ⚠ pending
+- README.md: ⚠ pending
+- docs/quickstart.md: ⚠ pending
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics — Essentials Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity
+The textbook and its associated tools must be easy to understand, use, and maintain. Solutions should prioritize clarity and directness over unnecessary complexity.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Accuracy
+All information presented in the textbook and provided by the RAG chatbot must be factually correct and up-to-date with current best practices in Physical AI and Humanoid Robotics.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Minimalism
+Design and implementation should focus on core functionality, avoiding extraneous features or bloat. This applies to code, content, and infrastructure.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Fast Builds
+The Docusaurus build process must be optimized for speed to ensure rapid iteration and deployment, minimizing developer friction.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Free-tier Architecture
+All components and services used must be compatible with free-tier usage limits to ensure accessibility and minimize operational costs for users. This includes database, hosting, and AI services.
 
-### [PRINCIPLE_6_NAME]
+### VI. RAG Answers ONLY from Book Text
+The RAG chatbot must strictly derive its answers solely from the content within the textbook. It must not generate information outside of the provided corpus.
 
+## Scope and Constraints
 
-[PRINCIPLE__DESCRIPTION]
+### Scope
+- 6 short chapters: Introduction to Physical AI, Basics of Humanoid Robotics, ROS 2 Fundamentals, Digital Twin Simulation (Gazebo + Isaac), Vision-Language-Action Systems, Capstone: Simple AI-Robot Pipeline
+- Clean Docusaurus UI
+- Free-tier friendly
+- Lightweight embeddings
+- Docusaurus textbook
+- RAG chatbot (Qdrant + Neon + FastAPI)
+- Select-text → Ask AI
+- Optional Urdu / Personalize features
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Constraints
+- No heavy GPU usage
+- Minimal embeddings
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Success Criteria
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Build success
+- Accurate chatbot (RAG answers ONLY from book text)
+- Clean UI
+- Smooth GitHub Pages deployment
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+Constitution supersedes all other project documentation and practices. Amendments require a documented proposal, review, and approval by project stakeholders. Compliance with this constitution will be reviewed regularly by the core development team. All changes to the constitution will result in a version bump following semantic versioning.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-02
