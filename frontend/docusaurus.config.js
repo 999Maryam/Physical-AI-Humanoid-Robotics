@@ -7,6 +7,11 @@ const config = {
   tagline: 'Physical AI and Humanoid Robotics',
   favicon: 'img/favicon.ico',
 
+  url: 'https://999maryam.github.io',
+  baseUrl: '/Physical-AI-Humanoid-Robotics/',
+  organizationName: '999Maryam',
+  projectName: 'Physical-AI-Humanoid-Robotics',
+  trailingSlash: true,
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
