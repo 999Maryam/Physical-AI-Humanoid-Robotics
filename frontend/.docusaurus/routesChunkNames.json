@@ -1,0 +1,89 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/docs-604": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/docs-ebf": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---docs-005-788"
+  },
+  "/docs-070": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/basics-of-humanoid-robotics-880": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-basics-of-humanoid-robotics-9-f-3-76e"
+  },
+  "/docs/capstone-5dc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-capstonea-39-f64"
+  },
+  "/docs/digital-twin-simulation-282": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-digital-twin-simulationfc-6-62a"
+  },
+  "/docs/introduction-to-physical-ai-98a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-introduction-to-physical-aia-7-e-72d"
+  },
+  "/docs/ros-2-fundamentals-fd8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ros-2-fundamentals-232-8f8"
+  },
+  "/docs/vision-language-action-systems-e2a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-vision-language-action-systems-008-7c3"
+  },
+  "/-2e1": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---a-74-9d6"
+    },
+    "config": "config---5-e-9-4f3"
+  }
+}

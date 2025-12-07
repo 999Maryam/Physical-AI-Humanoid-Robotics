@@ -1,0 +1,39 @@
+---
+id: capstone
+title: Capstone
+sidebar_label: Capstone
+---
+
+# Capstone
+
+This capstone chapter integrates the concepts learned throughout the textbook to build a simple, end-to-end AI-robot pipeline. It demonstrates how different components—from perception and reasoning to action—work together in a practical application.
+
+## Project Overview
+
+The goal of this capstone project is to create a robot system that can perform a basic task, such as identifying a specific object and moving it to a designated location, using a combination of vision, basic AI reasoning, and robotic control.
+
+## Architecture
+
+1.  **Perception Module**: Utilizes a camera sensor (simulated or real) and a simple object detection algorithm (e.g., color-based detection, basic machine learning model) to locate the target object.
+2.  **Reasoning Module**: A simple state machine or rule-based AI determines the next action based on the perceived environment and the task goal (e.g., "if object detected, move to grasp; if object grasped, move to drop-off location").
+3.  **Manipulation Module**: Commands a robotic arm to execute grasping and placement actions. This involves inverse kinematics for reaching target poses and basic gripper control.
+4.  **Communication**: ROS 2 will be used as the middleware to facilitate communication between the perception, reasoning, and manipulation nodes.
+
+## Implementation Steps
+
+-   **Set up Simulation Environment**: Use Gazebo or Isaac Sim to create a virtual environment with a robot arm and target objects.
+-   **Integrate Camera and Object Detection**: Develop or integrate a module for visual perception and object localization.
+-   **Develop Robotic Control**: Implement basic control for the robot arm, including inverse kinematics and gripper control.
+-   **Create ROS 2 Nodes**: Package perception, reasoning, and manipulation logic into separate ROS 2 nodes.
+-   **Define ROS 2 Topics/Services**: Establish communication channels for data exchange between nodes.
+-   **Develop Task Logic**: Implement the main control loop that orchestrates the robot's behavior based on the task goal.
+-   **Testing and Refinement**: Thoroughly test the pipeline in simulation and debug any issues.
+
+## Learning Outcomes
+
+Upon completing this capstone, you will have a practical understanding of:
+
+-   Integrating different AI and robotics components.
+-   Designing and implementing a complete robot system.
+-   Troubleshooting and debugging complex robotic pipelines.
+-   Applying theoretical knowledge to real-world (simulated) challenges.

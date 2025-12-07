@@ -1,0 +1,58 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "introduction-to-physical-ai",
+          "docs": [
+            {
+              "id": "basics-of-humanoid-robotics",
+              "path": "/docs/basics-of-humanoid-robotics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "capstone",
+              "path": "/docs/capstone",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin-simulation",
+              "path": "/docs/digital-twin-simulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "introduction-to-physical-ai",
+              "path": "/docs/introduction-to-physical-ai",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros-2-fundamentals",
+              "path": "/docs/ros-2-fundamentals",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "vision-language-action-systems",
+              "path": "/docs/vision-language-action-systems",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/introduction-to-physical-ai",
+                "label": "Introduction to Physical AI"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

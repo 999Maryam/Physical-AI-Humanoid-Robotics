@@ -1,0 +1,29 @@
+{
+  "id": "basics-of-humanoid-robotics",
+  "title": "Basics of Humanoid Robotics",
+  "description": "This chapter delves into the foundational aspects of humanoid robotics, covering their design, locomotion, manipulation, and interaction capabilities.",
+  "source": "@site/docs/02.basics-of-humanoid-robotics.mdx",
+  "sourceDirName": ".",
+  "slug": "/basics-of-humanoid-robotics",
+  "permalink": "/docs/basics-of-humanoid-robotics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02.basics-of-humanoid-robotics.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "basics-of-humanoid-robotics",
+    "title": "Basics of Humanoid Robotics",
+    "sidebar_label": "Basics of Humanoid Robotics"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to Physical AI",
+    "permalink": "/docs/introduction-to-physical-ai"
+  },
+  "next": {
+    "title": "Digital Twin Simulation",
+    "permalink": "/docs/digital-twin-simulation"
+  }
+}

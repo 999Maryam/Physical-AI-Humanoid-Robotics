@@ -1,0 +1,118 @@
+openapi: 3.0.0
+info:
+  title: AI-native Textbook RAG Chatbot API
+  version: 1.0.0
+  description: API for the RAG chatbot component of the AI-native textbook, providing interactive question answering based on textbook content.
+
+servers:
+  - url: /api/v1
+    description: Primary API server
+
+paths:
+  /chat/query:
+    post:
+      summary: Submit a query to the RAG chatbot
+      operationId: submitChatQuery
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                  description: The user's question or prompt.
+                  example: "What is Physical AI?"
+                user_id:
+                  type: string
+                  description: Optional user ID for personalization/logging.
+                  example: "user123"
+                context:
+                  type: string
+                  description: Optional current chapter or section ID for contextual queries.
+                  example: "chapter-1-intro"
+      responses:
+        '200':
+          description: Successful response from the chatbot.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatbotResponse'
+        '400':
+          description: Invalid request payload.
+        '500':
+          description: Internal server error.
+
+  /chapters/{chapter_id}/translate:
+    post:
+      summary: Request translation of a chapter to Urdu (Optional)
+      operationId: translateChapterToUrdu
+      parameters:
+        - name: chapter_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The ID of the chapter to translate.
+          example: "chapter-1-intro"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - target_language
+              properties:
+                target_language:
+                  type: string
+                  description: The language to translate to (e.g., "ur" for Urdu).
+                  example: "ur"
+      responses:
+        '200':
+          description: Chapter content successfully translated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  chapter_id:
+                    type: string
+                  translated_content:
+                    type: string
+                    description: The translated content of the chapter.
+        '404':
+          description: Chapter not found.
+        '501':
+          description: Translation service not implemented or available for target language.
+
+components:
+  schemas:
+    ChatbotResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the response.
+        query_id:
+          type: string
+          description: Reference to the UserQuery this response is answering.
+        text:
+          type: string
+          description: The AI-generated answer.
+        source_references:
+          type: array
+          items:
+            type: string
+          description: List of specific sections/paragraphs in the textbook that support the answer.
+        timestamp:
+          type: string
+          format: date-time
+          description: Time when the response was generated.
+        relevance_score:
+          type: number
+          format: float
+          description: An internal score indicating how relevant the response is to the query.

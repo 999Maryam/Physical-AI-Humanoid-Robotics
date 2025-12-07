@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant_db
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+      - QDRANT__SERVICE__HTTP_PORT=6333
+
+  neon_proxy:
+    image: neondatabase/neon-proxy:latest
+    container_name: neon_proxy
+    ports:
+      - "5432:5432"
+    environment:
+      # Replace with your actual Neon connection string or secrets management
+      - NEON_CONN_STR=${NEON_CONN_STR}
+    depends_on:
+      - qdrant
+
+volumes:
+  qdrant_data:
+

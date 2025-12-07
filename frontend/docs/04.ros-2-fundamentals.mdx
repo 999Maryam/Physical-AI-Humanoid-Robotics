@@ -1,0 +1,41 @@
+---
+id: ros-2-fundamentals
+title: ROS 2 Fundamentals
+sidebar_label: ROS 2 Fundamentals
+---
+
+# ROS 2 Fundamentals
+
+This chapter introduces the Robot Operating System 2 (ROS 2), a flexible framework for writing robot software. It covers core concepts, tools, and best practices for developing distributed robotic applications.
+
+## What is ROS 2?
+
+ROS 2 is an open-source middleware for robotics that provides services designed for a heterogeneous computing environment, including real-time control, inter-process communication, and tooling. It is the successor to ROS 1, offering improved security, quality of service (QoS), and support for multiple platforms.
+
+## Core Concepts
+
+1.  **Nodes**: Executable processes that perform computation (e.g., a node for camera driver, a node for motor control).
+2.  **Topics**: Named buses over which nodes exchange messages. This is a publish-subscribe communication model.
+3.  **Services**: A request-response communication model for long-running computations or operations that require a direct response.
+4.  **Actions**: A higher-level communication type for long-running, goal-oriented tasks (e.g., move a robot to a specific location).
+5.  **Parameters**: Configuration values that nodes can load and modify at runtime.
+6.  **Packages**: The primary unit for organizing ROS 2 code. A package contains nodes, libraries, configuration files, etc.
+
+## Key Tools
+
+-   **`ros2 run`**: Runs an executable from a package.
+-   **`ros2 topic`**: Inspects and manipulates ROS 2 topics.
+-   **`ros2 service`**: Inspects and manipulates ROS 2 services.
+-   **`ros2 param`**: Inspects and manipulates ROS 2 parameters.
+-   **`colcon build`**: The build tool for ROS 2 packages.
+-   **`rviz2`**: A 3D visualization tool for robots and sensor data.
+
+## Developing with ROS 2
+
+-   **Workspaces**: Directories where you organize your ROS 2 development, containing source packages.
+-   **Message Definitions**: ROS 2 uses IDL (Interface Definition Language) to define custom message, service, and action types.
+-   **Launch Files**: XML or Python files used to start and configure multiple ROS 2 nodes simultaneously.
+
+## Quality of Service (QoS)
+
+ROS 2 introduces QoS policies to fine-tune communication behavior, addressing concerns like reliability, durability, and latency, which are critical for various robotic applications.

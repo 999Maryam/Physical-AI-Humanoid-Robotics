@@ -1,0 +1,24 @@
+{
+  "id": "vision-language-action-systems",
+  "title": "Vision-Language-Action Systems",
+  "description": "This chapter explores the cutting-edge field of Vision-Language-Action (VLA) systems, which integrate computer vision, natural language understanding, and robotic control to enable robots to understand high-level commands and perform complex tasks in diverse environments.",
+  "source": "@site/docs/vision-language-action-systems.mdx",
+  "sourceDirName": ".",
+  "slug": "/vision-language-action-systems",
+  "permalink": "/docs/vision-language-action-systems",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/vision-language-action-systems.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "vision-language-action-systems",
+    "title": "Vision-Language-Action Systems",
+    "sidebar_label": "Vision-Language-Action Systems"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "intro",
+    "permalink": "/docs/intro"
+  }
+}
