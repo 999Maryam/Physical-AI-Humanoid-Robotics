@@ -1,0 +1,29 @@
+{
+  "id": "vision-language-action-5vla",
+  "title": "Vision-Language-Action Systems",
+  "description": "Weeks 11-13: Vision-Language-Action Systems",
+  "source": "@site/docs/05.vision-language-action-5vla.mdx",
+  "sourceDirName": ".",
+  "slug": "/vision-language-action-5vla",
+  "permalink": "/docs/vision-language-action-5vla",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/docs/05.vision-language-action-5vla.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "vision-language-action-5vla",
+    "title": "Vision-Language-Action Systems",
+    "sidebar_label": "Vision-Language-Action Systems"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Fundamentals",
+    "permalink": "/docs/ros-2-fundamentals"
+  },
+  "next": {
+    "title": "Capstone Projects",
+    "permalink": "/docs/capstone"
+  }
+}
