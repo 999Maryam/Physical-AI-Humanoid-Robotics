@@ -7,11 +7,11 @@ const config = {
   tagline: 'Physical AI and Humanoid Robotics',
   favicon: 'img/favicon.ico',
 
-  url: 'https://999maryam.github.io',
+  url: 'https://physical-ai-humanoid-robotics-twwy.vercel.app',
   baseUrl: '/',
   organizationName: '999Maryam',
   projectName: 'Physical-AI-Humanoid-Robotics',
-  trailingSlash: true,
+  trailingSlash: false,
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
