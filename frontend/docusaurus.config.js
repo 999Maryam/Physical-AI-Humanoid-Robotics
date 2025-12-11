@@ -8,10 +8,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://999maryam.github.io',
-  baseUrl: '/',
+  baseUrl: '/Physical-AI-Humanoid-Robotics/',
   organizationName: '999Maryam',
   projectName: 'Physical-AI-Humanoid-Robotics',
-  trailingSlash: true,
+  trailingSlash: false,
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
