@@ -1,0 +1,74 @@
+---
+id: vision-language-action-5vla
+title: Vision-Language-Action Systems
+sidebar_label: Vision-Language-Action Systems
+---
+
+# Module 4: Vision-Language-Action (VLA) 🗣️
+
+## Weeks 11-13: Vision-Language-Action Systems
+
+### Vision-Language-Action (VLA) Systems
+Vision-Language-Action (VLA) systems represent the convergence of three critical AI domains: computer vision for perception, natural language processing for understanding human commands, and robotic action for physical execution. These systems enable robots to interpret high-level human instructions and translate them into sequences of physical actions in real-world environments.
+
+### Voice-to-Action with Whisper
+The integration of voice processing technologies like OpenAI's Whisper enables robots to understand spoken commands in natural language. This involves:
+
+-   **Speech Recognition**: Converting human speech to text with high accuracy
+-   **Language Understanding**: Parsing the intent and entities from spoken commands
+-   **Command Grounding**: Mapping abstract language concepts to specific robotic actions
+-   **Real-time Processing**: Ensuring low-latency response to spoken instructions
+
+Whisper's multilingual capabilities allow robots to understand commands in multiple languages, making them more accessible for diverse applications.
+
+### Cognitive Planning with LLMs
+Large Language Models (LLMs) like GPT, Claude, and specialized robotics models serve as cognitive planners that can:
+
+-   **Task Decomposition**: Break down complex high-level commands into sequences of executable subtasks
+-   **Context Awareness**: Consider environmental constraints and available resources when planning
+-   **Adaptive Reasoning**: Adjust plans based on real-time feedback and changing conditions
+-   **Knowledge Integration**: Leverage world knowledge to make informed decisions about task execution
+
+The integration of LLMs with robotic systems enables more flexible and generalizable task execution compared to traditional rule-based planning approaches.
+
+### Week 13: Advanced VLA Integration
+Week 13 focuses on the complete integration of VLA systems with ROS 2:
+
+- **ROS 2 Action Servers**: Implementing action servers that can receive high-level commands from LLMs
+- **Middleware Integration**: Connecting Whisper speech recognition with LLM cognitive planning through ROS 2 services
+- **Execution Monitoring**: Real-time monitoring and adjustment of plans during execution
+- **Human-in-the-Loop**: Implementing feedback mechanisms for human correction and guidance
+
+### Capstone Project: Voice Command to Physical Action
+The comprehensive capstone project integrates all concepts learned throughout the course:
+
+#### System Architecture:
+1. **Voice Input**: User speaks a command (e.g., "Please bring me the red bottle from the kitchen")
+2. **Speech-to-Text**: Whisper processes the audio and converts it to text
+3. **LLM Cognitive Planning**: The language model parses the command, identifies objects and locations, and generates a high-level plan
+4. **ROS 2 Execution**: The plan is translated into ROS 2 messages and services
+5. **Perception**: Vision systems identify and locate the requested object using cameras and sensors
+6. **Navigation**: The robot navigates to the object location using ROS 2 Navigation2 stack
+7. **Manipulation**: Robotic arm grasps the object using MoveIt2 and ros2_control
+8. **Delivery**: Robot transports the object to the user and places it appropriately
+
+#### Technical Flow:
+- Voice → Whisper → Text → LLM → Plan → ROS 2 Nodes → Perception → Navigation → Manipulation → Action
+
+This end-to-end pipeline demonstrates the integration of all major components covered in the course, from basic ROS 2 communication to advanced AI systems for perception and planning.
+
+## Labs This Week 🧪
+- **Lab 11.1**: Integrate Whisper API with ROS 2 nodes for speech recognition
+- **Lab 11.2**: Implement basic natural language command parsing
+- **Lab 12.1**: Connect LLM cognitive planning with ROS 2 action servers
+- **Lab 12.2**: Test vision-language integration for object identification
+- **Lab 13.1**: Complete VLA pipeline integration with real-time execution
+- **Lab 13.2**: Implement human-in-the-loop feedback mechanisms
+
+## Further Reading 📚
+- Zhu, Y., et al. (2023). "Vision-Language-Action (VLA) Models: A Comprehensive Survey." *arXiv preprint arXiv:2305.17142*.
+- Brohan, C., et al. (2022). "RT-1: Robotics Transformer for Real-World Control at Scale." *arXiv preprint arXiv:2202.01191*.
+- Huang, S., et al. (2022). "Collaborating with language models for embodied tasks." *arXiv preprint arXiv:2202.01191*.
+- Recent papers from CoRL and RSS on vision-language-action learning.
+
+> **💡 Key Insight**: The success of VLA systems depends on the quality of grounding between abstract language concepts and concrete robotic actions—this remains one of the most challenging aspects of embodied AI development.

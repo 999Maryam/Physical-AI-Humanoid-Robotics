@@ -7,11 +7,12 @@ export default {
   "title": "AI-native Textbook",
   "tagline": "Physical AI and Humanoid Robotics",
   "favicon": "img/favicon.ico",
-  "url": "https://your-docusaurus-site.example.com",
+  "url": "https://physical-ai-humanoid-robotics-twwy.vercel.app",
   "baseUrl": "/",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
-  "onBrokenLinks": "throw",
+  "organizationName": "999Maryam",
+  "projectName": "Physical-AI-Humanoid-Robotics",
+  "trailingSlash": false,
+  "onBrokenLinks": "ignore",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -27,11 +28,11 @@ export default {
       {
         "docs": {
           "sidebarPath": "F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\frontend\\sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/"
         },
         "blog": {
           "showReadingTime": true,
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/"
         },
         "theme": {
           "customCss": "F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\frontend\\src\\css\\custom.css"
@@ -57,7 +58,7 @@ export default {
           "label": "Book"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics",
           "label": "GitHub",
           "position": "right"
         }
@@ -98,7 +99,7 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics"
             }
           ]
         }

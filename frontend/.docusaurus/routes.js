@@ -39,15 +39,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '604'),
+    component: ComponentCreator('/docs', '0a9'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'ebf'),
+        component: ComponentCreator('/docs', '0a6'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '070'),
+            component: ComponentCreator('/docs', 'f22'),
             routes: [
               {
                 path: '/docs/basics-of-humanoid-robotics',
@@ -80,8 +80,8 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/vision-language-action-systems',
-                component: ComponentCreator('/docs/vision-language-action-systems', 'e2a'),
+                path: '/docs/vision-language-action-5vla',
+                component: ComponentCreator('/docs/vision-language-action-5vla', 'a7a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
