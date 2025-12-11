@@ -1,39 +1,106 @@
 ---
 id: capstone
-title: Capstone
-sidebar_label: Capstone
+title: Capstone Projects
+sidebar_label: Capstone Projects
 ---
 
-# Capstone
+# Capstone Projects 🚀
 
-This capstone chapter integrates the concepts learned throughout the textbook to build a simple, end-to-end AI-robot pipeline. It demonstrates how different components—from perception and reasoning to action—work together in a practical application.
+## Project Focus
+The capstone project represents the culmination of your Physical AI journey, integrating all concepts learned throughout the course into a comprehensive, end-to-end system. You'll build a complete pipeline that demonstrates the full stack of physical AI: from voice input and language understanding through vision-based perception to robotic action execution.
 
-## Project Overview
+## Detailed Capstone Description
+Your primary capstone project involves creating an integrated system that can:
+1. **Receive voice commands** through speech recognition technology (Whisper)
+2. **Process and understand** the command using LLM-based cognitive planning
+3. **Perceive the environment** using vision systems and sensor data
+4. **Plan and execute actions** using ROS 2 control systems
+5. **Navigate and manipulate** objects in physical space
 
-The goal of this capstone project is to create a robot system that can perform a basic task, such as identifying a specific object and moving it to a designated location, using a combination of vision, basic AI reasoning, and robotic control.
+The system architecture combines state-of-the-art AI technologies with practical robotics engineering, demonstrating the complete pipeline from human intention to physical action.
 
-## Architecture
+## Tiered Project Ideas
 
-1.  **Perception Module**: Utilizes a camera sensor (simulated or real) and a simple object detection algorithm (e.g., color-based detection, basic machine learning model) to locate the target object.
-2.  **Reasoning Module**: A simple state machine or rule-based AI determines the next action based on the perceived environment and the task goal (e.g., "if object detected, move to grasp; if object grasped, move to drop-off location").
-3.  **Manipulation Module**: Commands a robotic arm to execute grasping and placement actions. This involves inverse kinematics for reaching target poses and basic gripper control.
-4.  **Communication**: ROS 2 will be used as the middleware to facilitate communication between the perception, reasoning, and manipulation nodes.
+### Table-Clearing Robot (Beginner)
+- **Objective**: Clear objects from a table surface
+- **Skills**: Basic manipulation, grasp planning, collision avoidance
+- **Components**: Vision system for object detection, simple pick-and-place actions
+- **Complexity**: 2-3 weeks implementation
 
-## Implementation Steps
+### Laundry Assistant (Intermediate)
+- **Objective**: Sort and fold clothes or transport laundry between locations
+- **Skills**: Object classification, deformable object manipulation, multi-step planning
+- **Components**: Advanced perception, manipulation planning, navigation
+- **Complexity**: 4-6 weeks implementation
 
--   **Set up Simulation Environment**: Use Gazebo or Isaac Sim to create a virtual environment with a robot arm and target objects.
--   **Integrate Camera and Object Detection**: Develop or integrate a module for visual perception and object localization.
--   **Develop Robotic Control**: Implement basic control for the robot arm, including inverse kinematics and gripper control.
--   **Create ROS 2 Nodes**: Package perception, reasoning, and manipulation logic into separate ROS 2 nodes.
--   **Define ROS 2 Topics/Services**: Establish communication channels for data exchange between nodes.
--   **Develop Task Logic**: Implement the main control loop that orchestrates the robot's behavior based on the task goal.
--   **Testing and Refinement**: Thoroughly test the pipeline in simulation and debug any issues.
+### Bring Coke Robot (Advanced)
+- **Objective**: Navigate to kitchen, identify and grasp a Coke bottle, bring to user
+- **Skills**: Long-horizon planning, navigation, complex manipulation, human interaction
+- **Components**: Full VLA system integration, advanced perception, manipulation
+- **Complexity**: 6-8 weeks implementation
 
-## Learning Outcomes
+## Hardware Deployment Notes
+When transitioning from simulation to physical hardware, consider these critical factors:
+- **Safety Protocols**: Implement emergency stops and collision detection
+- **Calibration**: Ensure accurate sensor-to-robot calibration
+- **Robustness**: Handle real-world uncertainties and sensor noise
+- **Testing**: Extensive simulation testing before physical deployment
 
-Upon completing this capstone, you will have a practical understanding of:
+## Motivational Closing
+You've journeyed through the fascinating world of Physical AI, from understanding the fundamentals of humanoid robotics to mastering complex vision-language-action systems. The skills you've developed—integrating perception, planning, and action—position you at the forefront of a technological revolution that's reshaping how humans and machines interact. As you embark on your capstone project, remember that you're not just building a robot; you're creating an intelligent system that bridges the digital and physical worlds.
 
--   Integrating different AI and robotics components.
--   Designing and implementing a complete robot system.
--   Troubleshooting and debugging complex robotic pipelines.
--   Applying theoretical knowledge to real-world (simulated) challenges.
+---
+
+## Hardware Tables
+
+### Economy Jetson Kit Table
+| Component | Model | Price (USD) | Purpose |
+|-----------|-------|-------------|---------|
+| SBC | NVIDIA Jetson Orin Nano Super | $249 | Edge AI computing |
+| Camera | Global Shutter Camera | $50-100 | Visual perception |
+| IMU | 9-axis IMU | $25-50 | Orientation sensing |
+| Motors | Servo motors (12V) | $15-30 each | Actuation |
+| Chassis | Custom 3D printed | $50-100 | Robot structure |
+| Power | 12V Battery pack | $30-60 | Power system |
+| **Total** | | **$404-504** | **Basic mobile manipulator** |
+
+### Cloud Options
+| Provider | Service | Use Case | Cost Estimate |
+|----------|---------|----------|---------------|
+| AWS | RoboMaker | Cloud robotics simulation | $0.47/hour |
+| Azure | IoT Hub | Device management | $0.05/device/month |
+| Google | Cloud IoT | Data ingestion & analytics | $0.28/10k messages |
+| NVIDIA | Fleet Command | Edge AI management | $0.10/hour |
+| AWS | SageMaker | ML model training | $0.04/hour (GPU) |
+
+### Unitree G1/Go2 Recommendations
+| Model | Unitree G1 | Unitree Go2 |
+|-------|------------|-------------|
+| **Price** | ~$16,000 | ~$2,700 |
+| **Use Case** | Full humanoid research | Quadruped platform |
+| **Payload** | 5kg | 1kg |
+| **Battery Life** | 2+ hours | 2+ hours |
+| **SDK Support** | ROS 2, Python, C++ | ROS 2, Python, C++ |
+| **Best For** | Advanced humanoid research | Agile mobile platform |
+
+### 2025 Updates
+- **AI Chip Integration**: More powerful edge AI chips with better power efficiency
+- **Simulation Advances**: Improved sim-to-real transfer learning
+- **Humanoid Deployment**: Increased commercial deployment of humanoid robots
+- **Safety Standards**: New safety protocols for human-robot interaction
+- **Open Source**: Continued growth in open-source robotics frameworks
+
+## Labs This Week 🧪
+- **Lab 14.1**: Integrate all modules into a complete VLA system
+- **Lab 14.2**: Test voice-to-action pipeline with simulated robot
+- **Lab 15.1**: Deploy complete system on physical hardware
+- **Lab 15.2**: Performance optimization and debugging
+- **Lab 16.1**: Final system validation and presentation preparation
+
+## Further Reading 📚
+- Siciliano, B. & Khatib, O. (2016). *Springer Handbook of Robotics*. Springer.
+- Goodfellow, I., et al. (2016). *Deep Learning*. MIT Press.
+- Recent papers from RSS, ICRA, and IROS on integrated robotics systems.
+- OpenAI. (2023). "GPT-4 Technical Report." *OpenAI Research*.
+
+> **💡 Key Insight**: The integration of multiple complex systems (vision, language, action) often reveals unexpected interactions and failure modes that weren't apparent during individual module development—thorough integration testing is crucial for success.

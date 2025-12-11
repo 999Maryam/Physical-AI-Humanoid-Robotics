@@ -14,7 +14,7 @@
       "calendar": "gregory",
       "path": "en",
       "translate": false,
-      "url": "https://your-docusaurus-site.example.com",
+      "url": "https://999maryam.github.io",
       "baseUrl": "/"
     },
     "ur": {
@@ -24,7 +24,7 @@
       "calendar": "gregory",
       "path": "ur",
       "translate": false,
-      "url": "https://your-docusaurus-site.example.com",
+      "url": "https://999maryam.github.io",
       "baseUrl": "/ur/"
     }
   }
