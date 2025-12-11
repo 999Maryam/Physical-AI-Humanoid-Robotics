@@ -14,7 +14,7 @@
       "calendar": "gregory",
       "path": "en",
       "translate": false,
-      "url": "https://999maryam.github.io",
+      "url": "https://physical-ai-humanoid-robotics-twwy.vercel.app",
       "baseUrl": "/"
     },
     "ur": {
@@ -24,7 +24,7 @@
       "calendar": "gregory",
       "path": "ur",
       "translate": false,
-      "url": "https://999maryam.github.io",
+      "url": "https://physical-ai-humanoid-robotics-twwy.vercel.app",
       "baseUrl": "/ur/"
     }
   }
