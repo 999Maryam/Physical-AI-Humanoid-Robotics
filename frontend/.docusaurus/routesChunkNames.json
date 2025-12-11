@@ -1,83 +1,83 @@
 {
-  "/__docusaurus/debug/-546": {
+  "/__docusaurus/debug-5ff": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/__docusaurus/debug/config/-8a8": {
+  "/__docusaurus/debug/config-5ba": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/__docusaurus/debug/content/-2da": {
+  "/__docusaurus/debug/content-a2b": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     },
-    "__props": "__props---docusaurus-debug-content-197-dc7"
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
   },
-  "/__docusaurus/debug/globalData/-178": {
+  "/__docusaurus/debug/globalData-c3c": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/__docusaurus/debug/metadata/-d6c": {
+  "/__docusaurus/debug/metadata-156": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/__docusaurus/debug/registry/-6e3": {
+  "/__docusaurus/debug/registry-88c": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/__docusaurus/debug/routes/-cab": {
+  "/__docusaurus/debug/routes-000": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-b-38-895"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/docs/-dba": {
+  "/docs-0a9": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---docs-aba-4f5"
+      "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs/-418": {
+  "/docs-0a6": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-11-b-f70"
+    "__props": "__props---docs-005-788"
   },
-  "/docs/-2df": {
+  "/docs-f22": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/basics-of-humanoid-robotics/-db1": {
+  "/docs/basics-of-humanoid-robotics-880": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-basics-of-humanoid-robotics-9-f-3-ab8"
+    "content": "content---docs-basics-of-humanoid-robotics-9-f-3-76e"
   },
-  "/docs/capstone/-339": {
+  "/docs/capstone-5dc": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-capstone-a-39-bb7"
+    "content": "content---docs-capstonea-39-f64"
   },
-  "/docs/digital-twin-simulation/-1bf": {
+  "/docs/digital-twin-simulation-282": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-simulation-fc-6-813"
+    "content": "content---docs-digital-twin-simulationfc-6-62a"
   },
-  "/docs/introduction-to-physical-ai/-812": {
+  "/docs/introduction-to-physical-ai-98a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-introduction-to-physical-ai-a-7-e-29b"
+    "content": "content---docs-introduction-to-physical-aia-7-e-72d"
   },
-  "/docs/ros-2-fundamentals/-6dc": {
+  "/docs/ros-2-fundamentals-fd8": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-fundamentals-232-162"
+    "content": "content---docs-ros-2-fundamentals-232-8f8"
   },
-  "/docs/vision-language-action-5vla/-b8f": {
+  "/docs/vision-language-action-5vla-a7a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-vision-language-action-5-vla-956-091"
+    "content": "content---docs-vision-language-action-5-vla-956-584"
   },
   "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
