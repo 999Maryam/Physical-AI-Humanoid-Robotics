@@ -7,8 +7,8 @@ export default {
   "title": "AI-native Textbook",
   "tagline": "Physical AI and Humanoid Robotics",
   "favicon": "img/favicon.ico",
-  "url": "https://physical-ai-humanoid-robotics-twwy.vercel.app",
-  "baseUrl": "/",
+  "url": "https://physical-ai-humanoid-robotics-eight-snowy.vercel.app",
+  "baseUrl": "/ur/",
   "organizationName": "999Maryam",
   "projectName": "Physical-AI-Humanoid-Robotics",
   "trailingSlash": false,
@@ -46,7 +46,7 @@ export default {
       "title": "AI-Textbook",
       "logo": {
         "alt": "Logo",
-        "src": "/img/logo.svg",
+        "src": "img/logo.svg",
         "width": 48,
         "height": 48
       },

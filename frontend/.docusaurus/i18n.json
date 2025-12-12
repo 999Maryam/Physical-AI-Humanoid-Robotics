@@ -5,7 +5,7 @@
     "ur"
   ],
   "path": "i18n",
-  "currentLocale": "en",
+  "currentLocale": "ur",
   "localeConfigs": {
     "en": {
       "label": "English",
@@ -14,7 +14,7 @@
       "calendar": "gregory",
       "path": "en",
       "translate": false,
-      "url": "https://physical-ai-humanoid-robotics-twwy.vercel.app",
+      "url": "https://physical-ai-humanoid-robotics-eight-snowy.vercel.app",
       "baseUrl": "/"
     },
     "ur": {
@@ -24,7 +24,7 @@
       "calendar": "gregory",
       "path": "ur",
       "translate": false,
-      "url": "https://physical-ai-humanoid-robotics-twwy.vercel.app",
+      "url": "https://physical-ai-humanoid-robotics-eight-snowy.vercel.app",
       "baseUrl": "/ur/"
     }
   }

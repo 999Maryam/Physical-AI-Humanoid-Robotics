@@ -7,8 +7,8 @@ const config = {
   tagline: 'Physical AI and Humanoid Robotics',
   favicon: 'img/favicon.ico',
 
-  url: 'https://999maryam.github.io',
-  baseUrl: '/Physical-AI-Humanoid-Robotics/',
+  url: 'https://physical-ai-humanoid-robotics-eight-snowy.vercel.app',
+  baseUrl: '/',
   organizationName: '999Maryam',
   projectName: 'Physical-AI-Humanoid-Robotics',
   trailingSlash: false,
@@ -57,7 +57,7 @@ const config = {
         title: 'AI-Textbook',
         logo: {
           alt: 'Logo',
-          src: '/img/logo.svg',  
+          src: 'img/logo.svg',
           width: 48,                    
           height: 48,
         },

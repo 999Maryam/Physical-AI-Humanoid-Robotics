@@ -3,85 +3,50 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '5ff'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
-    exact: true
-  },
-  {
-    path: '/docs',
-    component: ComponentCreator('/docs', '0a9'),
+    path: '/ur/docs',
+    component: ComponentCreator('/ur/docs', 'd95'),
     routes: [
       {
-        path: '/docs',
-        component: ComponentCreator('/docs', '0a6'),
+        path: '/ur/docs',
+        component: ComponentCreator('/ur/docs', 'a7f'),
         routes: [
           {
-            path: '/docs',
-            component: ComponentCreator('/docs', 'f22'),
+            path: '/ur/docs',
+            component: ComponentCreator('/ur/docs', 'bc1'),
             routes: [
               {
-                path: '/docs/basics-of-humanoid-robotics',
-                component: ComponentCreator('/docs/basics-of-humanoid-robotics', '880'),
+                path: '/ur/docs/basics-of-humanoid-robotics',
+                component: ComponentCreator('/ur/docs/basics-of-humanoid-robotics', '246'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/capstone',
-                component: ComponentCreator('/docs/capstone', '5dc'),
+                path: '/ur/docs/capstone',
+                component: ComponentCreator('/ur/docs/capstone', '47c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/digital-twin-simulation',
-                component: ComponentCreator('/docs/digital-twin-simulation', '282'),
+                path: '/ur/docs/digital-twin-simulation',
+                component: ComponentCreator('/ur/docs/digital-twin-simulation', '554'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/introduction-to-physical-ai',
-                component: ComponentCreator('/docs/introduction-to-physical-ai', '98a'),
+                path: '/ur/docs/introduction-to-physical-ai',
+                component: ComponentCreator('/ur/docs/introduction-to-physical-ai', '6da'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/ros-2-fundamentals',
-                component: ComponentCreator('/docs/ros-2-fundamentals', 'fd8'),
+                path: '/ur/docs/ros-2-fundamentals',
+                component: ComponentCreator('/ur/docs/ros-2-fundamentals', '96e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/vision-language-action-5vla',
-                component: ComponentCreator('/docs/vision-language-action-5vla', 'a7a'),
+                path: '/ur/docs/vision-language-action-5vla',
+                component: ComponentCreator('/ur/docs/vision-language-action-5vla', '116'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -92,8 +57,8 @@ export default [
     ]
   },
   {
-    path: '/',
-    component: ComponentCreator('/', '2e1'),
+    path: '/ur/',
+    component: ComponentCreator('/ur/', '3b1'),
     exact: true
   },
   {
