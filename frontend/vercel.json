@@ -1,5 +1,4 @@
 {
-  "framework": "docusaurus",
   "builds": [
     {
       "src": "package.json",
@@ -9,10 +8,16 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/ur/(.*)",
+      "destination": "/ur/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
