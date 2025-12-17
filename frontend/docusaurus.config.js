@@ -48,6 +48,11 @@ const config = {
     ],
   ],
 
+  themes: [
+    // ... your other themes
+  ],
+
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

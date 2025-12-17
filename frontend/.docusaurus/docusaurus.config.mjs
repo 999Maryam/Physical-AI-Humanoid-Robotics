@@ -40,6 +40,7 @@ export default {
       }
     ]
   ],
+  "themes": [],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
@@ -362,7 +363,6 @@ export default {
   ],
   "customFields": {},
   "plugins": [],
-  "themes": [],
   "scripts": [],
   "headTags": [],
   "stylesheets": [],

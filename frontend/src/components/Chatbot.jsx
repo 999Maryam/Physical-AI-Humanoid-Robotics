@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { sendChatQuery } from '../services/chatbot_api';
+import styles from './Chatbot.module.css';
 
 function Chatbot() {
   const [messages, setMessages] = useState([]);
@@ -25,7 +26,7 @@ function Chatbot() {
   };
 
   return (
-        <div className={styles.chatbotContainer}>
+    <div className={styles.chatbotContainer}>
       <div className={styles.messagesList}>
         {messages.map((msg) => (
           <div key={msg.id} className={`${styles.message} ${styles[msg.sender]}`}>

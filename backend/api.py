@@ -10,7 +10,7 @@ from agent.py.
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 import logging
 from dotenv import load_dotenv
 import os
@@ -40,7 +40,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Define request and response models
+# Define request and response models for the original /ask endpoint
 class QueryRequest(BaseModel):
     query: str
     response_length: Optional[int] = None  # Not directly used but available for future use
@@ -51,6 +51,22 @@ class QueryResponse(BaseModel):
     response: str
     status: Optional[str] = "success"
     error_message: Optional[str] = None
+
+# Define models for the new /api/v1/chat/query endpoint
+class ChatQueryRequest(BaseModel):
+    id: str
+    text: str
+    user_id: Optional[str] = None
+    context: Optional[dict] = None
+
+class ChatbotResponse(BaseModel):
+    text: str
+    source_references: Optional[List[str]] = []
+
+# Combined response model that matches frontend expectations
+class ChatQueryResponse(BaseModel):
+    text: str
+    source_references: Optional[List[str]] = []
 
 # Error handling wrapper around create_rag_response
 def safe_create_rag_response(query: str) -> QueryResponse:
@@ -95,3 +111,33 @@ def ask_rag(request: QueryRequest):
     result = safe_create_rag_response(request.query)
     logger.info(f"Query processed successfully, response length: {len(result.response) if result.response else 0} characters")
     return result
+
+# New endpoint to match frontend expectations
+@app.post("/api/v1/chat/query", response_model=ChatQueryResponse)
+def chat_query(chat_request: ChatQueryRequest):
+    """Submit a chat query to the RAG system"""
+    logger.info(f"Received chat query request with ID: {chat_request.id}")
+
+    if not chat_request.text or len(chat_request.text.strip()) == 0:
+        raise HTTPException(status_code=400, detail="Query text is required and must not be empty")
+
+    # Limit query length to prevent overly long requests
+    if len(chat_request.text) > 1000:
+        raise HTTPException(status_code=400, detail="Query is too long. Maximum length is 1000 characters.")
+
+    try:
+        # Use the existing RAG function to generate response
+        response_text = create_rag_response(chat_request.text)
+
+        # For now, return a basic response; in a full implementation,
+        # source_references would be extracted from the RAG response
+        response = ChatQueryResponse(
+            text=response_text,
+            source_references=[]  # This would be populated from the RAG system in a full implementation
+        )
+
+        logger.info(f"Chat query processed successfully, response length: {len(response.text) if response.text else 0} characters")
+        return response
+    except Exception as e:
+        logger.error(f"Error in chat query processing: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error processing chat query: {str(e)}")
