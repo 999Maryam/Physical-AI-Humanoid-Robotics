@@ -1,69 +1,73 @@
 <!-- Sync Impact Report:
-Version change: None → 1.0.0
+Version change: 1.0.0 → 1.1.0
 List of modified principles:
-- [PRINCIPLE_1_NAME] → Simplicity
-- [PRINCIPLE_2_NAME] → Accuracy
-- [PRINCIPLE_3_NAME] → Minimalism
-- [PRINCIPLE_4_NAME] → Fast Builds
-- [PRINCIPLE_5_NAME] → Free-tier Architecture
-- [PRINCIPLE_6_NAME] → RAG Answers ONLY from Book Text
+- Simplicity → Book Content Accuracy
+- Accuracy → User-Centric Design
+- Minimalism → Scalability with Free-tier Services
+- Fast Builds → Security and Privacy
+- Free-tier Architecture → Cohere API Adaptability
+- RAG Answers ONLY from Book Text → User-Selected Text Support
 Added sections: Scope and Constraints, Success Criteria
 Removed sections: None
 Templates requiring updates:
-- .specify/templates/plan-template.md: ⚠ pending
-- .specify/templates/spec-template.md: ⚠ pending
-- .specify/templates/tasks-template.md: ⚠ pending
-- .specify/templates/commands/*.md: ⚠ pending
-- README.md: ⚠ pending
-- docs/quickstart.md: ⚠ pending
+- .specify/templates/plan-template.md: ✅ updated
+- .specify/templates/spec-template.md: ✅ updated
+- .specify/templates/tasks-template.md: ✅ updated
+- .specify/templates/commands/*.md: ✅ updated
+- README.md: ✅ updated
+- docs/quickstart.md: ✅ updated
 Follow-up TODOs: None
 -->
-# Physical AI & Humanoid Robotics — Essentials Constitution
+# Integrated RAG Chatbot Development for a Published Book — Constitution
 
 ## Core Principles
 
-### I. Simplicity
-The textbook and its associated tools must be easy to understand, use, and maintain. Solutions should prioritize clarity and directness over unnecessary complexity.
+### I. Book Content Accuracy
+The RAG chatbot must provide accurate retrieval and generation based solely on the published book content. All answers must be grounded in retrieved book content with proper citations to source sections, ensuring no hallucinations or fabricated information.
 
-### II. Accuracy
-All information presented in the textbook and provided by the RAG chatbot must be factually correct and up-to-date with current best practices in Physical AI and Humanoid Robotics.
+### II. User-Centric Design
+The chatbot interface must provide seamless interaction for users, including intuitive handling of selected text queries. The user experience should be responsive and accessible, meeting user expectations for clarity and usefulness.
 
-### III. Minimalism
-Design and implementation should focus on core functionality, avoiding extraneous features or bloat. This applies to code, content, and infrastructure.
+### III. Scalability with Free-tier Services
+The architecture must utilize free-tier services to ensure accessibility and cost-efficiency. All components including Cohere API, Neon Serverless Postgres, and Qdrant Cloud Free Tier must operate within free usage limits while maintaining performance.
 
-### IV. Fast Builds
-The Docusaurus build process must be optimized for speed to ensure rapid iteration and deployment, minimizing developer friction.
+### IV. Security and Privacy
+Data handling must prioritize security and privacy, especially with user-selected text. No API key leaks or security vulnerabilities should occur. All sensitive information must be properly protected and transmitted securely.
 
-### V. Free-tier Architecture
-All components and services used must be compatible with free-tier usage limits to ensure accessibility and minimize operational costs for users. This includes database, hosting, and AI services.
+### V. Cohere API Adaptability
+The system must use Cohere API keys for all LLM interactions, avoiding any OpenAI dependencies. The architecture should be adaptable to Cohere's specific features and capabilities while maintaining flexibility for future updates.
 
-### VI. RAG Answers ONLY from Book Text
-The RAG chatbot must strictly derive its answers solely from the content within the textbook. It must not generate information outside of the provided corpus.
+### VI. User-Selected Text Support
+The system must support queries limited to specific excerpts without requiring full book context. Users should be able to select text portions and ask questions specifically about those selections, with the chatbot responding appropriately within that scope.
 
 ## Scope and Constraints
 
 ### Scope
-- 6 short chapters: Introduction to Physical AI, Basics of Humanoid Robotics, ROS 2 Fundamentals, Digital Twin Simulation (Gazebo + Isaac), Vision-Language-Action Systems, Capstone: Simple AI-Robot Pipeline
-- Clean Docusaurus UI
-- Free-tier friendly
-- Lightweight embeddings
-- Docusaurus textbook
-- RAG chatbot (Qdrant + Neon + FastAPI)
-- Select-text → Ask AI
-- Optional Urdu / Personalize features
+- RAG pipeline with FastAPI backend
+- Neon Serverless Postgres for metadata storage
+- Qdrant Cloud Free Tier for vector embeddings
+- Cohere API integration for LLM interactions
+- User-selected text querying capability
+- Embedding in published book format (web or PDF with interactive elements)
+- Modular, well-documented code with error handling and logging
+- Unit tests for retrieval accuracy and integration tests for end-to-end flow
 
 ### Constraints
-- No heavy GPU usage
-- Minimal embeddings
+- Tech stack: Cohere API, FastAPI, Neon Serverless Postgres, Qdrant Cloud Free Tier
+- No paid tiers beyond free limits; optimize for resource efficiency
+- Zero API key leaks or security vulnerabilities
+- Development tools: Build using spec-kit plus and claude cli for specification and generation
+- Timeline: Iterative development with milestones for prototype, testing, and embedding
 
 ## Success Criteria
 
-- Build success
-- Accurate chatbot (RAG answers ONLY from book text)
-- Clean UI
-- Smooth GitHub Pages deployment
+- Chatbot accurately answers 90%+ of book-related questions in blind tests
+- Handles user-selected text queries without hallucinations
+- Zero API key leaks or security vulnerabilities
+- Successful embedding in published book with responsive UI
+- Positive user feedback on clarity and usefulness
 
 ## Governance
 Constitution supersedes all other project documentation and practices. Amendments require a documented proposal, review, and approval by project stakeholders. Compliance with this constitution will be reviewed regularly by the core development team. All changes to the constitution will result in a version bump following semantic versioning.
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-02
+**Version**: 1.1.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-12

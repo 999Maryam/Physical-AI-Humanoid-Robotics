@@ -5,7 +5,7 @@
     "ur"
   ],
   "path": "i18n",
-  "currentLocale": "ur",
+  "currentLocale": "en",
   "localeConfigs": {
     "en": {
       "label": "English",
@@ -23,7 +23,7 @@
       "htmlLang": "ur",
       "calendar": "gregory",
       "path": "ur",
-      "translate": false,
+      "translate": true,
       "url": "https://physical-ai-humanoid-robotics-eight-snowy.vercel.app",
       "baseUrl": "/ur/"
     }

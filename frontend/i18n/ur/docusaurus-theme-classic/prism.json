@@ -1,0 +1,22 @@
+{
+  "theme.prism.lineNumberTitle": {
+    "message": "لائنز",
+    "description": "The title attribute for the line number container"
+  },
+  "theme.prism.copyButtonTitle": {
+    "message": "کوپی کریں",
+    "description": "The title attribute for the copy button"
+  },
+  "theme.prism.copyButtonAriaLabel": {
+    "message": "کوڈ بلاک کو کوپی کریں",
+    "description": "The ARIA label for the copy button"
+  },
+  "theme.prism.copySuccessMessage": {
+    "message": "کوپی ہو گیا!",
+    "description": "The text that will be displayed in a toast message when the text is copied"
+  },
+  "theme-last-updated.label": {
+    "message": "آخری تازہ کاری",
+    "description": "The label used for the last updated date"
+  }
+}

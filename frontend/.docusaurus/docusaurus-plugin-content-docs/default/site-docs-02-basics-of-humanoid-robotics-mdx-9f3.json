@@ -5,7 +5,7 @@
   "source": "@site/docs/02.basics-of-humanoid-robotics.mdx",
   "sourceDirName": ".",
   "slug": "/basics-of-humanoid-robotics",
-  "permalink": "/ur/docs/basics-of-humanoid-robotics",
+  "permalink": "/docs/basics-of-humanoid-robotics",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/docs/02.basics-of-humanoid-robotics.mdx",
@@ -20,10 +20,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Introduction to Physical AI",
-    "permalink": "/ur/docs/introduction-to-physical-ai"
+    "permalink": "/docs/introduction-to-physical-ai"
   },
   "next": {
     "title": "Digital Twin Simulation",
-    "permalink": "/ur/docs/digital-twin-simulation"
+    "permalink": "/docs/digital-twin-simulation"
   }
 }

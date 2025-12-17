@@ -1,0 +1,54 @@
+{
+  "theme.navbar.navAriaLabel": {
+    "message": "ہیڈر",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "پچھلا مینو دیکھیں",
+    "description": "The label of the back button to return to main menu, when browsing a mobile sidebar secondary menu (that is a submenu)"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "زبان",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "ورژن",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "دستاویزات کا سائیڈ بار",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "سائیڈ بار بند کریں",
+    "description": "The ARIA label for close sidebar button"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "سائیڈ بار ٹوگل کریں",
+    "description": "The ARIA label for the toggle sidebar button"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "سائیڈ بار کو وسعت دیں",
+    "description": "The ARIA label for the expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "سائیڈ بار کو وسعت دیں",
+    "description": "The title attribute for the expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "سائیڈ بار کو سکیڑیں",
+    "description": "The ARIA label for the collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "سائیڈ بار کو سکیڑیں",
+    "description": "The title attribute for the collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.docSidebarItems.expandAll": {
+    "message": "سب وسعت دیں",
+    "description": "The text to expand all sidebar items"
+  },
+  "theme.docs.sidebar.docSidebarItems.collapseAll": {
+    "message": "سب سکیڑیں",
+    "description": "The text to collapse all sidebar items"
+  }
+}

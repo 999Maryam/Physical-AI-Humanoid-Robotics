@@ -1,0 +1,192 @@
+# OpenAPI Contract: RAG Data Retrieval API
+
+```yaml
+openapi: 3.0.0
+info:
+  title: RAG Data Retrieval API
+  description: API for testing RAG pipeline data retrieval from Qdrant
+  version: 1.0.0
+
+paths:
+  /api/retrieve:
+    post:
+      summary: Retrieve documents from Qdrant based on similarity
+      description: Perform similarity search in Qdrant to retrieve relevant documents
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RetrievalRequest'
+      responses:
+        '200':
+          description: Successful retrieval of documents
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrievalResponse'
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server error during retrieval
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/validate-storage:
+    get:
+      summary: Validate vector storage integrity
+      description: Check that documents are properly stored in Qdrant with embeddings
+      responses:
+        '200':
+          description: Storage validation results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationResult'
+        '500':
+          description: Server error during validation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/list-collections:
+    get:
+      summary: List available Qdrant collections
+      description: Get list of all collections in the Qdrant instance
+      responses:
+        '200':
+          description: List of available collections
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  collections:
+                    type: array
+                    items:
+                      type: string
+        '500':
+          description: Server error during collection listing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    RetrievalRequest:
+      type: object
+      required:
+        - query_text
+      properties:
+        query_text:
+          type: string
+          description: Text to search for similar documents
+          example: "What is the main concept of vector embeddings?"
+        top_k:
+          type: integer
+          description: Number of results to return
+          default: 5
+          minimum: 1
+          maximum: 100
+          example: 5
+        collection_name:
+          type: string
+          description: Name of Qdrant collection to search
+          example: "documents"
+        min_score:
+          type: number
+          description: Minimum relevance score threshold
+          minimum: 0
+          maximum: 1
+          example: 0.5
+
+    RetrievalResponse:
+      type: object
+      required:
+        - query
+        - results
+        - total_count
+        - execution_time
+      properties:
+        query:
+          type: string
+          description: Original query text
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/QueryResult'
+        total_count:
+          type: integer
+          description: Total number of results found
+        execution_time:
+          type: number
+          description: Time taken for retrieval in seconds
+
+    QueryResult:
+      type: object
+      required:
+        - id
+        - content
+        - score
+        - metadata
+        - position
+      properties:
+        id:
+          type: string
+          description: Document ID from Qdrant collection
+        content:
+          type: string
+          description: Retrieved document content
+        score:
+          type: number
+          description: Relevance score from similarity search
+          minimum: 0
+          maximum: 1
+        metadata:
+          type: object
+          description: Document metadata from original ingestion
+        position:
+          type: integer
+          description: Position in results list
+
+    ValidationResult:
+      type: object
+      required:
+        - is_valid
+        - message
+      properties:
+        is_valid:
+          type: boolean
+          description: Whether validation passed
+        message:
+          type: string
+          description: Description of validation result
+        details:
+          type: object
+          description: Additional validation details
+        timestamp:
+          type: string
+          format: date-time
+          description: When validation was performed
+
+    ErrorResponse:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          description: Error type
+        message:
+          type: string
+          description: Error description
+```
