@@ -1,9 +1,7 @@
 .chatbotContainer {
   display: flex;
   flex-direction: column;
-  height: 500px; /* Adjust as needed */
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  height: 100%;
   overflow: hidden;
   font-family: Arial, sans-serif;
 }
