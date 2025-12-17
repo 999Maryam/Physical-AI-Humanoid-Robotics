@@ -1,13 +1,18 @@
 [project]
-name = "backend"
+name = "rag-ingestion-pipeline"
 version = "0.1.0"
-description = "Add your description here"
+description = "RAG Ingestion Pipeline for extracting content from Docusaurus sites, generating embeddings, and storing in vector database"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
-    "cohere>=5.20.0",
-    "fastapi>=0.124.0",
-    "qdrant-client>=1.16.1",
-    "requests>=2.32.5",
-    "trafilatura>=2.0.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "cohere>=4.9.0",
+    "qdrant-client>=1.8.0",
+    "python-dotenv>=1.0.0",
+    "tiktoken>=0.5.0",
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+    "openai>=1.0.0",
+    "langchain-core>=0.1.0",
 ]

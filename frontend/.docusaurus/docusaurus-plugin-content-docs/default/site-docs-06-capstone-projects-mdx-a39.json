@@ -5,7 +5,7 @@
   "source": "@site/docs/06.capstone-projects.mdx",
   "sourceDirName": ".",
   "slug": "/capstone",
-  "permalink": "/ur/docs/capstone",
+  "permalink": "/docs/capstone",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/docs/06.capstone-projects.mdx",
@@ -20,6 +20,6 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Vision-Language-Action Systems",
-    "permalink": "/ur/docs/vision-language-action-5vla"
+    "permalink": "/docs/vision-language-action-5vla"
   }
 }

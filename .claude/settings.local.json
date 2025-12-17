@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from src.main import app; print(''Import successful'')\")",
+      "Bash(pip install langchain-openai langchain-community langchain-core)",
+      "Bash(.specify/scripts/powershell/update-agent-context.ps1 -AgentType claude)",
+      "Bash(dir \"F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\backend\"\" /s)",
+      "Bash(powershell -Command \"Test-Path ''F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\backend\\src\\models\\agent.py''\")",
+      "Bash(.specify/scripts/powershell/create-new-feature.ps1 -Json \" Integrate RAG backend with frontend\n\nTarget:\n- Frontend and full-stack developers\n\nFocus:\n- Local frontend–backend communication\n\nSuccess criteria:\n- Frontend calls FastAPI RAG endpoint\" --number 1 --short-name \"rag-backend-frontend\")",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(git rev-parse --abbrev-ref HEAD)"
+    ]
+  }
+}
