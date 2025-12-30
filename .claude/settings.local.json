@@ -8,7 +8,8 @@
       "Bash(powershell -Command \"Test-Path ''F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\backend\\src\\models\\agent.py''\")",
       "Bash(.specify/scripts/powershell/create-new-feature.ps1 -Json \" Integrate RAG backend with frontend\n\nTarget:\n- Frontend and full-stack developers\n\nFocus:\n- Local frontend–backend communication\n\nSuccess criteria:\n- Frontend calls FastAPI RAG endpoint\" --number 1 --short-name \"rag-backend-frontend\")",
       "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
-      "Bash(git rev-parse --abbrev-ref HEAD)"
+      "Bash(git rev-parse --abbrev-ref HEAD)",
+      "Bash(dir \"frontend\\\\src\\\\components\")"
     ]
   }
 }
