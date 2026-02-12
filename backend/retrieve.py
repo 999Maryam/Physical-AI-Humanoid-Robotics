@@ -63,7 +63,7 @@ class QdrantRetriever:
                 self.client = QdrantClient(
                     url=qdrant_url,
                     api_key=qdrant_api_key,
-                    prefer_grpc=True
+                    prefer_grpc=False
                 )
             else:
                 self.client = QdrantClient(

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { sendChatQuery } from '../services/chatbot_api';
 import styles from './Chatbot.module.css';
 
@@ -6,9 +6,20 @@ function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false); // Tracks if bot is processing
+  const [retryInfo, setRetryInfo] = useState(null); // Tracks retry status
+  const lastRequestTime = useRef(0); // For throttling
 
   const handleSendMessage = async () => {
     if (input.trim() === '') return;
+
+    // Throttle: prevent sending messages too quickly (min 500ms between requests)
+    const now = Date.now();
+    const timeSinceLastRequest = now - lastRequestTime.current;
+    if (timeSinceLastRequest < 500 && lastRequestTime.current !== 0) {
+      console.log('Throttled: Please wait before sending another message');
+      return;
+    }
+    lastRequestTime.current = now;
 
     // Add user's message
     const userMessage = { id: Date.now(), text: input, sender: 'user' };
@@ -16,6 +27,7 @@ function Chatbot() {
 
     // Show "Thinking..." message
     setIsLoading(true);
+    setRetryInfo(null); // Clear any previous retry info
     const thinkingMessageId = Date.now() + 1;
     const thinkingMessage = {
       id: thinkingMessageId,
@@ -25,8 +37,34 @@ function Chatbot() {
     };
     setMessages((prev) => [...prev, thinkingMessage]);
 
+    const queryText = input;
+    setInput(''); // Clear input field immediately
+
     try {
-      const data = await sendChatQuery(input);
+      // Call API with retry callback for UI updates
+      const data = await sendChatQuery(queryText, null, null, (attempt, maxRetries, backoffTime) => {
+        // Update retry info for user feedback
+        setRetryInfo({
+          attempt,
+          maxRetries,
+          backoffTime: Math.round(backoffTime / 1000), // Convert to seconds
+        });
+
+        // Update thinking message to show retry status
+        setMessages((prev) =>
+          prev.map((msg) =>
+            msg.id === thinkingMessageId
+              ? {
+                  ...msg,
+                  text: `Rate limit reached. Retrying in ${Math.round(backoffTime / 1000)}s... (${attempt}/${maxRetries})`,
+                }
+              : msg
+          )
+        );
+      });
+
+      // Clear retry info on success
+      setRetryInfo(null);
 
       // Replace "Thinking..." with actual bot response
       const botMessage = {
@@ -44,21 +82,34 @@ function Chatbot() {
     } catch (error) {
       console.error('Error sending message:', error);
 
+      // Clear retry info
+      setRetryInfo(null);
+
+      // Determine error message based on error type
+      let errorMessage = 'Error: Could not get a response from the chatbot.';
+
+      if (error.statusCode === 429 || error.message === 'RATE_LIMIT') {
+        errorMessage = '⚠️ Rate limit exceeded. The service is busy right now. Please try again in a moment.';
+      } else if (error.statusCode === 500) {
+        errorMessage = '⚠️ Server error. The AI service is temporarily unavailable. Please try again later.';
+      } else if (error.message && error.message.includes('Failed to fetch')) {
+        errorMessage = '⚠️ Network error. Please check your connection and try again.';
+      }
+
       // Replace thinking message with error
       setMessages((prev) =>
         prev
           .filter((msg) => msg.id !== thinkingMessageId)
           .concat({
             id: Date.now() + 2,
-            text: 'Error: Could not get a response from the chatbot.',
+            text: errorMessage,
             sender: 'bot',
+            isError: true,
           })
       );
     } finally {
       setIsLoading(false); // Stop loading state
     }
-
-    setInput(''); // Clear input field
   };
 
   return (

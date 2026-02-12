@@ -25,7 +25,7 @@ def test_qdrant_connection():
         client = QdrantClient(
             url=QDRANT_URL,
             api_key=QDRANT_API_KEY,
-            prefer_grpc=True
+            prefer_grpc=False
         )
 
         print("[SUCCESS] Successfully connected to Qdrant")
@@ -126,7 +126,7 @@ def test_with_different_dimensions():
             client = QdrantClient(
                 url=QDRANT_URL,
                 api_key=QDRANT_API_KEY,
-                prefer_grpc=True
+                prefer_grpc=False
             )
 
             # Create a temporary test collection

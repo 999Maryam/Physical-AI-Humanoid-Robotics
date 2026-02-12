@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 # Load environment variables
 load_dotenv()
 
-from agent import create_rag_response
+from agent import create_rag_response, RateLimitExceededError, ServiceUnavailableError
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -115,7 +115,7 @@ def ask_rag(request: QueryRequest):
 # New endpoint to match frontend expectations
 @app.post("/api/v1/chat/query", response_model=ChatQueryResponse)
 def chat_query(chat_request: ChatQueryRequest):
-    """Submit a chat query to the RAG system"""
+    """Submit a chat query to the RAG system with improved error handling"""
     logger.info(f"Received chat query request with ID: {chat_request.id}")
 
     if not chat_request.text or len(chat_request.text.strip()) == 0:
@@ -138,6 +138,53 @@ def chat_query(chat_request: ChatQueryRequest):
 
         logger.info(f"Chat query processed successfully, response length: {len(response.text) if response.text else 0} characters")
         return response
+
+    except RateLimitExceededError as e:
+        # Custom rate limit exception from retry logic
+        logger.error(f"Rate limit exceeded after retries: {str(e)}")
+        raise HTTPException(
+            status_code=429,
+            detail={
+                "error": "rate_limit_exceeded",
+                "message": "API rate limit exceeded. Please try again in a moment.",
+                "retry_after": 60  # Suggest retry after 60 seconds
+            }
+        )
+
+    except ServiceUnavailableError as e:
+        # Service unavailable after retries
+        logger.error(f"Service unavailable after retries: {str(e)}")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "service_unavailable",
+                "message": "AI service is temporarily unavailable. Please try again later.",
+                "retry_after": 30  # Suggest retry after 30 seconds
+            }
+        )
+
     except Exception as e:
-        logger.error(f"Error in chat query processing: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Error processing chat query: {str(e)}")
+        # Catch-all for unexpected errors
+        logger.error(f"Unexpected error in chat query processing: {type(e).__name__}: {str(e)}")
+
+        # Check if it's a rate limit error from string matching (fallback)
+        error_str = str(e).lower()
+        if "429" in error_str or "rate limit" in error_str or "too many requests" in error_str:
+            raise HTTPException(
+                status_code=429,
+                detail={
+                    "error": "rate_limit_exceeded",
+                    "message": "API rate limit exceeded. Please try again in a moment.",
+                    "retry_after": 60
+                }
+            )
+
+        # For other unexpected errors, return 500
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": "internal_error",
+                "message": "An unexpected error occurred while processing your request.",
+                "details": str(e) if logger.level <= logging.DEBUG else None  # Only in debug mode
+            }
+        )

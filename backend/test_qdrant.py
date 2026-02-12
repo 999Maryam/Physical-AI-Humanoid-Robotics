@@ -20,7 +20,7 @@ if qdrant_url:
     qdrant_client = QdrantClient(
         url=qdrant_url,
         api_key=qdrant_api_key,
-        prefer_grpc=True
+        prefer_grpc=False
     )
 else:
     print("Using host/port-based initialization")
@@ -33,6 +33,7 @@ else:
 print(f"Client type: {type(qdrant_client)}")
 print(f"query_points method exists: {hasattr(qdrant_client, 'query_points')}")
 print(f"search method exists: {hasattr(qdrant_client, 'search')}")
+print("Note: Use 'search' method instead of 'query_points'")
 
 # List some available methods
 methods = [method for method in dir(qdrant_client) if not method.startswith('_') and 'query' in method.lower()]
