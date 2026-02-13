@@ -27,7 +27,7 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\frontend\\sidebars.js",
+          "sidebarPath": "/mnt/f/Maryam/Quarter_4/book_hackathon/ai-textbook/frontend/sidebars.js",
           "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/"
         },
         "blog": {
@@ -35,7 +35,7 @@ export default {
           "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/"
         },
         "theme": {
-          "customCss": "F:\\Maryam\\Quarter_4\\book_hackathon\\ai-textbook\\frontend\\src\\css\\custom.css"
+          "customCss": "/mnt/f/Maryam/Quarter_4/book_hackathon/ai-textbook/frontend/src/css/custom.css"
         }
       }
     ]
