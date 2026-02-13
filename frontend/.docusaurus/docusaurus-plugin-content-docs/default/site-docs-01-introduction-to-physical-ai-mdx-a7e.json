@@ -5,7 +5,7 @@
   "source": "@site/docs/01.introduction-to-physical-ai.mdx",
   "sourceDirName": ".",
   "slug": "/introduction-to-physical-ai",
-  "permalink": "/docs/introduction-to-physical-ai",
+  "permalink": "/ur/docs/introduction-to-physical-ai",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/docs/01.introduction-to-physical-ai.mdx",
@@ -20,6 +20,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Basics of Humanoid Robotics",
-    "permalink": "/docs/basics-of-humanoid-robotics"
+    "permalink": "/ur/docs/basics-of-humanoid-robotics"
   }
 }

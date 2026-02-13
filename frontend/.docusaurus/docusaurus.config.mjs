@@ -8,7 +8,7 @@ export default {
   "tagline": "Physical AI and Humanoid Robotics",
   "favicon": "img/favicon.ico",
   "url": "https://physical-ai-humanoid-robotics-eight-snowy.vercel.app",
-  "baseUrl": "/",
+  "baseUrl": "/ur/",
   "organizationName": "999Maryam",
   "projectName": "Physical-AI-Humanoid-Robotics",
   "trailingSlash": false,

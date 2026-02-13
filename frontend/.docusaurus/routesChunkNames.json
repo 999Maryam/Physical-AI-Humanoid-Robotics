@@ -1,42 +1,42 @@
 {
-  "/docs-0a9": {
+  "/ur/docs-d95": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-0a6": {
+  "/ur/docs-a7f": {
     "__comp": "a7bd4aaa",
-    "__props": "0058b4c6"
+    "__props": "04f2558c"
   },
-  "/docs-f22": {
+  "/ur/docs-bc1": {
     "__comp": "a94703ab"
   },
-  "/docs/basics-of-humanoid-robotics-880": {
+  "/ur/docs/basics-of-humanoid-robotics-246": {
     "__comp": "17896441",
     "content": "9f359cc8"
   },
-  "/docs/capstone-5dc": {
+  "/ur/docs/capstone-47c": {
     "__comp": "17896441",
     "content": "a3981fa1"
   },
-  "/docs/digital-twin-simulation-282": {
+  "/ur/docs/digital-twin-simulation-554": {
     "__comp": "17896441",
     "content": "fc6fed34"
   },
-  "/docs/introduction-to-physical-ai-98a": {
+  "/ur/docs/introduction-to-physical-ai-6da": {
     "__comp": "17896441",
     "content": "a7ec6bd7"
   },
-  "/docs/ros-2-fundamentals-fd8": {
+  "/ur/docs/ros-2-fundamentals-96e": {
     "__comp": "17896441",
     "content": "232b566e"
   },
-  "/docs/vision-language-action-5vla-a7a": {
+  "/ur/docs/vision-language-action-5vla-116": {
     "__comp": "17896441",
     "content": "95695a56"
   },
-  "/-2e1": {
+  "/ur/-3b1": {
     "__comp": "c4f5d8e4",
     "__context": {
       "plugin": "a7456010"

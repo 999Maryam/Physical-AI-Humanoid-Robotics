@@ -5,7 +5,7 @@
   "source": "@site/docs/04.ros-2-fundamentals.mdx",
   "sourceDirName": ".",
   "slug": "/ros-2-fundamentals",
-  "permalink": "/docs/ros-2-fundamentals",
+  "permalink": "/ur/docs/ros-2-fundamentals",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/999Maryam/Physical-AI-Humanoid-Robotics/edit/main/frontend/docs/04.ros-2-fundamentals.mdx",
@@ -20,10 +20,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Digital Twin Simulation",
-    "permalink": "/docs/digital-twin-simulation"
+    "permalink": "/ur/docs/digital-twin-simulation"
   },
   "next": {
     "title": "Vision-Language-Action Systems",
-    "permalink": "/docs/vision-language-action-5vla"
+    "permalink": "/ur/docs/vision-language-action-5vla"
   }
 }
