@@ -4,6 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 // For local development: use localhost
 // For Hugging Face Spaces or other deployments: use relative path or the same host
 const getApiBaseUrl = () => {
+  if (typeof window === 'undefined') {
+    return ''; // Return empty string during SSR
+  }
   // Check if we're running locally (development)
   const isLocalhost = window.location.hostname === 'localhost' ||
                      window.location.hostname === '127.0.0.1' ||
@@ -17,8 +20,6 @@ const getApiBaseUrl = () => {
   }
 };
 
-const API_BASE_URL = getApiBaseUrl();
-
 // Helper function: exponential backoff delay
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -30,6 +31,7 @@ const getBackoffDelay = (attempt) => {
 
 // Main API call with retry logic for 429 errors
 export const sendChatQuery = async (queryText, userId = null, context = null, onRetry = null) => {
+  const API_BASE_URL = getApiBaseUrl();
   const maxRetries = 3;
   let lastError = null;
 
